@@ -1,2 +1,0 @@
-# easycrm
-Integration
