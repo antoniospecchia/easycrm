@@ -1,0 +1,102 @@
+# 🚀 easyCRM Quick Start Guide
+
+## 1️⃣ First Time Setup (2 minutes)
+
+```bash
+# Install dependencies
+npm install
+
+# Run setup wizard
+npm run setup
+
+# Start easyCRM
+npm start
+```
+
+Open your browser to: **http://localhost:3000**
+
+---
+
+## 2️⃣ Basic Operations
+
+### Add a Contact
+1. Click blue **"➕ Add Contact"** button
+2. Enter name (required) and any other details
+3. Add tags like "client", "prospect", "supplier"
+4. Click **"Add Contact"**
+
+### Quick Actions on Any Contact
+- **📞** = Log a phone call
+- **✅** = Add a task
+- **✏️** = Edit contact
+- **🔔** = Mark for follow-up
+- **🗑️** = Delete
+
+### View Modes
+- **📱 Grid** = Card view with all details
+- **📋 Table** = Spreadsheet view
+
+### Search & Filter
+- Type in search box to find contacts instantly
+- Use tag dropdown to filter by category
+
+---
+
+## 3️⃣ Power Features
+
+### Follow-Up System
+Contacts turn **orange** when they haven't been contacted in 30+ days
+
+### Bulk Operations
+1. Check multiple contacts
+2. Use bulk delete or tag operations
+
+### Import Contacts
+```
+Format: Name,Email,Phone,Company,Notes,Tags
+Example: John Doe,john@email.com,555-1234,ACME Corp,Important client,vip
+```
+
+### Export Data
+- **CSV** for Excel/Sheets
+- **Backup** for complete database
+
+---
+
+## 4️⃣ Keyboard Shortcuts
+
+- `G` → View options
+- `/` → Focus search
+- `N` → New contact
+- `T` → View tasks
+
+---
+
+## 5️⃣ Tips
+
+✨ **Tag Strategy**
+- Use consistent tags: `client`, `prospect`, `supplier`
+- Add status tags: `hot`, `cold`, `inactive`
+- Location tags: `local`, `international`
+
+📅 **Task Management**
+- Tasks auto-sort by due date
+- Overdue tasks appear in red
+- Click any task to see contact
+
+🔒 **Data Safety**
+- Your database is in `crm.db`
+- Back it up regularly with "💾 Backup"
+- All data stays on YOUR computer
+
+---
+
+## 🆘 Need Help?
+
+- Check the full README.md
+- Database is just a file - easy to backup
+- Reset everything: `npm run reset`
+
+---
+
+**Remember**: No cloud, no tracking, your data stays YOURS! 🔒
