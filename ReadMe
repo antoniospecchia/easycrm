@@ -1,0 +1,193 @@
+# 📊 easyCRM - Simple, Private, Local CRM
+
+**The CRM that respects your data privacy - everything stays on YOUR computer.**
+
+## 🎯 Perfect For
+- Freelancers & Consultants
+- Small Business Owners  
+- Startup Teams
+- Sales Professionals
+- Anyone who values data privacy
+
+## ✨ Key Features
+
+### 🔒 **100% Private**
+- No cloud, no subscriptions, no data mining
+- All data stored locally on YOUR computer
+- You own your data completely
+
+### 💼 **Professional Features**
+- **Contact Management** - Store unlimited contacts with custom tags
+- **Task Tracking** - Never miss a follow-up with integrated task management
+- **Interaction History** - Log calls, emails, meetings, and notes
+- **Smart Follow-ups** - Visual indicators for contacts needing attention
+- **Bulk Operations** - Manage multiple contacts efficiently
+- **Import/Export** - CSV support for easy data migration
+- **Full Backup** - JSON backup of entire database
+
+### 🎨 **Modern Interface**
+- Clean, intuitive design
+- Grid and table views
+- Click-to-email and click-to-call
+- Mobile-responsive layout
+- Real-time search and filtering
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js (version 14 or higher)
+- 5 minutes of your time
+
+### Installation
+
+1. **Download and extract easyCRM**
+```bash
+unzip easyCRM.zip
+cd easyCRM
+```
+
+2. **Install dependencies**
+```bash
+npm install
+```
+
+3. **Start the application**
+```bash
+npm start
+```
+
+4. **Open your browser**
+Navigate to: `http://localhost:3000`
+
+That's it! Your CRM is running locally on your computer.
+
+## 📖 User Guide
+
+### Adding Contacts
+1. Click "➕ Add Contact" button
+2. Fill in contact details (only Name is required)
+3. Add tags for easy organization (e.g., "client", "prospect", "supplier")
+4. Click "Add Contact"
+
+### Managing Tasks
+- **Quick Add**: Click ✅ on any contact card
+- **Full Add**: Click the Tasks stat box, then "Add Task"
+- Tasks automatically show as Overdue, Today, Upcoming, or Completed
+
+### Follow-up System
+- Contacts not contacted in 30+ days automatically show with 🔔
+- Orange names indicate follow-up needed
+- Click 🔔 to mark for immediate follow-up
+- Click 🔕 to remove follow-up flag
+
+### Keyboard Shortcuts
+- `Ctrl/Cmd + K` - Quick search
+- `G` then `G` - Toggle grid view
+- `G` then `T` - Toggle table view
+
+### Data Management
+
+#### Import Contacts
+1. Prepare CSV file with columns: Name, Email, Phone, Company, Notes, Tags
+2. Click "📥 Import"
+3. Select your CSV file
+4. Contacts are added instantly
+
+#### Export Data
+- **CSV Export**: Click "📤 Export CSV" for spreadsheet-compatible format
+- **Full Backup**: Click "💾 Backup" for complete JSON backup
+
+#### Data Location
+Your data is stored in `easyCRM/crm.db` (SQLite database)
+
+## 🛠️ Configuration
+
+### Change Port
+Edit `server.js` line 11:
+```javascript
+const PORT = 3000; // Change to your preferred port
+```
+
+### Database Location
+Edit `server.js` line 24:
+```javascript
+const db = new sqlite3.Database('crm.db'); // Change path if needed
+```
+
+## 🔧 Troubleshooting
+
+| Issue | Solution |
+|-------|----------|
+| Port 3000 in use | Change port in server.js or stop other application |
+| Cannot find module | Run `npm install` again |
+| Database locked | Ensure only one instance is running |
+| Import fails | Check CSV format matches template |
+
+## 🔐 Security Notes
+
+- ✅ No internet connection required (except for npm installation)
+- ✅ No user tracking or analytics
+- ✅ No external API calls
+- ✅ All data encrypted by your OS file system
+- ✅ Optional: Add `.htpasswd` for basic authentication
+
+## 📊 Database Schema
+
+```sql
+contacts (
+  id, name, email, phone, company, 
+  notes, tags, last_contact, created_at
+)
+
+tasks (
+  id, contact_id, title, description, 
+  due_date, priority, status, created_at
+)
+
+interactions (
+  id, contact_id, type, notes, date
+)
+
+notes (
+  id, contact_id, content, created_at
+)
+```
+
+## 🎯 Roadmap
+
+- [ ] Email integration
+- [ ] Calendar sync
+- [ ] Report generation
+- [ ] Custom fields
+- [ ] Multi-user support
+- [ ] Mobile app
+
+## 🤝 Contributing
+
+We welcome contributions! Please feel free to submit pull requests.
+
+## 📄 License
+
+MIT License - Use freely for personal and commercial projects.
+
+## 💡 Philosophy
+
+easyCRM was built on the belief that small businesses deserve powerful tools without sacrificing privacy or simplicity. No complex features you'll never use. No monthly fees. No data mining. Just a simple, effective CRM that works.
+
+## 🙏 Credits
+
+Created by Antonio Specchia  
+Built with: Node.js, Express, SQLite, Vanilla JavaScript  
+Icons: Native Emoji
+
+## 📞 Support
+
+- GitHub Issues: [github.com/antoniospecchia/easyCRM](https://github.com)
+- Website: [easycrm.me](https://easycrm.me)
+- Email: contact@antoniospecchia.com
+
+---
+
+**Remember**: Your data is YOURS. No cloud, no tracking, no nonsense.
+
+*If easyCRM helps your business, consider starring the repo or sharing with others who value privacy.*
